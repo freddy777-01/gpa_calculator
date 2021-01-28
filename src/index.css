@@ -1,0 +1,205 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  /* margin: auto; */
+  background-color: #3c4957;
+  color: aliceblue;
+  padding: 2rem;
+}
+body .uncought-error{
+  color: #ff4141;
+}
+#container {
+  /* text-align: center; */
+  color: #2c3e50;
+}
+button{
+  padding: 5px;
+  min-width: 5rem;
+  border-radius: 7px;
+  outline: none;
+  cursor: pointer;
+}
+
+#main{
+  display: flex;
+  justify-content: space-between;
+}
+#main .content{
+  max-height:25rem;
+  /* height: 80vh; */
+}
+#main .gradding{
+  min-width: 20rem;
+}
+#main .about-me{
+  color: aliceblue;
+ /* position: relative; */
+  overflow: hidden;
+  width: 0px;
+  max-height: 34rem;
+  transition:width 0.4s;
+}
+#main .about-me h4{
+  text-shadow: 1px 1px 2px black, 0 0 25px rgb(160, 160, 160), 0 0 5px rgb(255, 255, 255);
+  color: #fffb1b;
+  margin-bottom: 10px;
+  padding: 5px;
+}
+#main .about-me .me{
+  color: #2c3e50;
+  padding: 10px;
+  background-color: #a8b7ff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+#main .about-me .me span{
+  font-size: 14px;
+  /* font-weight: 600; */
+  /* background-color: #00ff37; */
+  border-radius: 8px;
+  padding: 4px;
+  margin: 0px 0px 5px 5px;
+}
+#main .about-me-btn{
+  position: relative;
+/* border: 2px solid red; */
+  transform: translate(30px,10rem);
+  height: 10rem;
+  width:5rem ;
+}
+#main .about-me-btn img{
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  /* border: 2px solid red; */
+  /* display: none; */
+}
+/* #main .about-me-btn h4{
+  background-color: #3c4957;
+  color: aliceblue;
+  width: 7rem;
+  border-radius: 5px;
+  padding: 2px 0px 2px 0px;
+  transform: rotate(270deg);
+  position: absolute;
+  cursor: pointer;
+  margin: 0px 0px 0px 20px;
+  right: 5px;
+  top: 4rem;
+  text-align: center;
+  display: none;
+} */
+.input-box{
+  padding: 4px;
+  width: 10rem;
+  outline: none;
+  border-radius: 7px;
+  border: 1px solid rgb(187, 187, 187);
+  transition: 0.3s;
+}
+.input-box:focus{
+  border: 1px solid rgb(22, 190, 36);
+}
+.grade-boxes{
+  display: block;
+  margin: 2px 0px 2px 0px;
+  border: 1px solid rgb(187, 187, 187);
+  transition: 0.3s;
+}
+.grade-boxes:hover{
+   border: 1px solid rgb(22, 190, 36);
+}
+.grade-boxes:focus{
+  background-color: #3c4957;
+  color: aliceblue;
+}
+
+.gradding .gradding-text{
+  color: aliceblue;
+}
+.gradding .gradding-head{
+  margin: 10px 0px 14px 0px;
+}
+.gradding .gradding-head button{
+  color: rgb(0, 0, 0);
+  margin: 5px 0px 0px 0px;
+  border: none;
+  transition: background 0.5s ease-in-out;
+  font-weight: 700;
+}
+/* .gradding .gradding-head #calc-btn{
+  background-color: rgb(116, 245, 116);
+} */
+.gradding .gradding-head #create-inputs{
+  background-color: rgb(255, 135, 88);
+}
+.gradding .gradding-head #clear-inputs{
+  background-color: rgb(250, 93, 93);
+  display: none;
+  transition: all 0.5s ease-in-out;
+}
+.gradding .gradding-head #grade-result{
+ background-color: #1489ff;
+ display: none;
+}
+.gradding.gradding-head button:hover{
+  background-color: rgb(12, 209, 12);
+  color: black;
+}
+
+.gradding .grade-container{
+  display: flex;
+}
+.grade-input-box{
+  min-width: 12rem;
+  /* border: 2px solid red; */
+}
+
+/* RESULTS TOTAL, AVERAGE AND GRADING */
+.grade-result{
+  /* border: 2px solid red; */
+  padding: 20px;
+  margin: 0px 0px 0px 15px;
+}
+.grade-result .results h5{
+  color: aliceblue;
+  margin: 0px 0px 10px 0px;
+}
+.grade-result .results span{
+  display: inline-block;
+  margin: 7px;
+}
+.grade-result .results .badge{
+  padding: 5px;
+  width: auto;
+  font-weight: 700;
+  background-color: rgb(177, 177, 177);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.grade-result .results .badge #description{
+  color:  #ff4141;
+}
+
+
+/* navigation buttons */
+#navigation button{
+  border: transparent;
+  margin: 0px 0px 5px 0px;
+  font-weight: 700;
+  background-color: #eeff00;
+  transition: .3s;
+}
+#navigation button:hover{
+  background-color: #f5ff70;
+}
+#navigation .focused{
+  background-color: #00ff37;
+}

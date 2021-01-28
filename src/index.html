@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <title>GPA_CALCULATOR</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <div class="uncought-error"></div>
+    <div id="container">
+     
+<nav id="navigation">
+  <button class="" data-level="olevel">O-Level</button>
+  <button class="" data-level="alevel">A-Level</button>
+  <button class="" data-level="certificate">Certificate</button>
+  <button class="" data-level="diploma5">Diploma(NTA Level 5)</button>
+  <button class="" data-level="diploma6">Diploma(NTA Level 6)</button>
+  <button class="" data-level="degree">Degree</button>
+</nav>
+
+<div id="main">
+  <div class="content gradding">
+    <div class="gradding-text">
+      Expected values: A, <u> Bplus for B+</u>, B, C, D, S, F (HINT:"Lowecases are allowed")
+    </div>
+    <div class="gradding-head">
+      <input type="number" name="" min="1" max="12" class="input-box" id="subject-number" placeholder="Number of Subjects">
+<button id="create-inputs">Create Inputs</button>
+      <button id="calc-btn" disabled>Calculate</button>
+      <button id="clear-inputs">Clear Inputs</button>
+      <button id="grade-result">Grade Results</button>
+    </div>
+    <div class="grade-container">
+      <div class="grade-input-box"></div>
+<div class="grade-result"></div>
+    </div>
+
+  </div>
+  <span class="about-me-btn">
+    <img src="icons/prev.png" alt="" srcset="" id="prev">
+    <!-- <h4>About Me</h4> -->
+</span>
+  <div class="content about-me">
+   <h4>GPA 😁 CALCULATOR: version 1.0.0</h4>
+    <h5>Introduction</h5>
+    <p>It is a simple grading app. 
+      since most of Me may forget🤔 how to grade their results 
+      or may find calculation boring🤷‍♂️,
+      This app is there to ease their efforts🙋‍♂️
+    </p> <br>
+    <h5>How it works</h5>
+    <p>Enter number of subjects you need to calculate,
+       Select Education Level You Prefer then click calculate.
+       After Calculation you can change the number of Subjects and click "Create Inputs"
+        to add inputs box(es)
+      </p><br>
+      <div class="me">
+        <h5>About🤔 Me😆</h5>
+        <p>
+          <h5>For any Questions,Suggestions Or Feedback✨ Contact Me :👇👇</h5>
+          <span> Email:📧 fred45722@gmail.com</span>
+          <span> Moblie:📱 255789925268</span>
+        </p>
+      </div>
+  </div>
+</div>
+    </div>
+  </body>
+  <script src="renderer.js"></script>
+
+  <!-- 
+1. for Science eliminate history and geography (civics and english)
+2.  
+   -->
+</html>
