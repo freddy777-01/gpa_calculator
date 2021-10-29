@@ -4,30 +4,38 @@
   "version": "1.0.0",
   "description": "THIS IS A SIMPLE GPA CALCULATOR",
   "main": "src/index.js",
+  "repository":{
+    "type": "git",
+    "url": "https://github.com/freddy777-01/gpa_calculator.git"
+  },
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
     "lint": "echo \"No linting configured\"",
-    "build-installer":"electron-builder"
+    "build-installer": "electron-builder"
   },
-  "build":{
-    "appId":"gpa-calculator",
-    "win":{
-      "target":["nsis"],
-      "icon":"./src/icons/gpa.ico"
+  "build": {
+    "appId": "gpa-calculator",
+    "win": {
+      "target": [
+        "nsis"
+      ],
+      "icon": "./src/icons/gpa.ico"
     },
-    "nsis":{
-      "installerIcon":"./src/icons/gpa.ico",
-      "uninstallerIcon":"./src/icons/gpa.ico",
-      "uninstallDisplayName":"GPA CALCULATOR",
-      "license":"license.txt",
-      "oneClick":false,
-      "allowToChangeInstallationDirectory":true
+    "nsis": {
+      "installerIcon": "./src/icons/gpa.ico",
+      "uninstallerIcon": "./src/icons/gpa.ico",
+      "uninstallDisplayName": "GPA CALCULATOR",
+      "license": "license.txt",
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
     }
   },
-  "keywords": ["education"],
+  "keywords": [
+    "education"
+  ],
   "author": {
     "name": "FEMAG",
     "email": "fred45722@gmail.com"
@@ -36,13 +44,21 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./src/icons/gpa.ico"
+        "icon": "./src/icons/gpa.ico",
+        "executableName": "gpa calculator",
+        "overwrite": true,
+        "asar": false
       },
       "makers": [
         {
           "name": "@electron-forge/maker-squirrel",
           "config": {
-            "name": "gpa_calculator"
+            "name": "gpa_calculator",
+            "setupExe": "gpa calculator.exe",
+            "setupIcon": "src\\icons\\gpa.ico",
+            "author": "Freddy Makaranga",
+            "noMsi": false,
+            "setupMsi": "gpa calculator"
           }
         },
         {
@@ -65,7 +81,9 @@
     }
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-is-dev": "^2.0.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "update-electron-app": "^2.0.1"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0-beta.54",

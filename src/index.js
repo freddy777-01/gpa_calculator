@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, autoUpdater, dialog} = require('electron');
 const path = require('path');
 const createApplicationMenu = require('./application-menu');
 /* require('electron-reload')(__dirname,{
@@ -62,3 +62,18 @@ app.on('activate', () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and import them here.
+
+const isDev = require('electron-is-dev');
+
+if (isDev) {
+	console.log('Running in development');
+} else {
+	console.log('Running in production');
+}
+
+/* creating update functionality*/
+
+require('update-electron-app')({
+  repo: 'freddy777-01/gpa_calculator',
+  updateInterval: '5 minutes'
+})
